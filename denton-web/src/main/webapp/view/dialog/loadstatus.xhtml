@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"    
+      xmlns:p="http://primefaces.org/ui" >
+    
+    <p:ajaxStatus onstart="statusdialog.show();"
+                  onsuccess="statusdialog.hide()"/>
+    
+        <p:dialog id="statusdialog" 
+                modal="true"
+                widgetVar="statusdialog"
+                resizable="false"
+                closable="false"
+                showHeader="false"
+                style="background-image: none; background-color: rgba(255,255,255,0.0);"
+                binding="#{indexBean.processDialog}">
+
+            <h:panelGrid columns="1">
+
+                <!--p:panel-->
+                    <p:graphicImage value="/view/image/ajaxloaderclock.gif"/>
+                <!--/p:panel-->
+
+            </h:panelGrid>
+
+        </p:dialog>
+    
+</html>

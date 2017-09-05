@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"    
+      xmlns:p="http://primefaces.org/ui" >
+    
+    <p:notificationBar id="ordinationtimes"
+                       position="bottom"
+                       effect="slide"
+                       autoDisplay="false"
+                       styleClass="top-notification"
+                       style="height: 160px; text-align: center;"
+                       binding="#{indexBean.ordinationTimes}">
+        
+        <h:panelGrid id="timegrid" 
+                         columns="1"
+                         width="98%"
+                         styleClass="ui-general-font"
+                         style="text-align: center; margin: 0px;">
+            
+                <h:outputText value="Öffnungszeiten zur Zeit:"
+                              styleClass="ui-timetable-font"/>
+            
+                <p:dataTable id="timetable"
+                            var="hours"
+                            value="#{ordinationHoursBean.ordinationHoursList}">
+
+                    <p:column headerText="Wochentag:"
+                              style="color: #e39000;">
+                        <h:outputText value="#{hours.weekDay}"
+                                      styleClass="ui-timetable-font"/>
+                    </p:column>
+
+                    <p:column headerText="Von:" 
+                              sortBy="hourFrom"
+                              style="color: #e39000;">
+                        <h:outputText value="#{hours.hourFrom}"
+                                      styleClass="ui-timetable-font"/>
+                    </p:column>
+
+                    <p:column headerText="Bis:" 
+                              sortBy="hourTo"
+                              style="color: #e39000;">
+                        <h:outputText value="#{hours.hourTo}"
+                                      styleClass="ui-timetable-font"/>
+                    </p:column>
+
+                </p:dataTable>
+            
+        </h:panelGrid>
+        
+    </p:notificationBar>
+    
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"    
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+    <h:head>
+        
+        <title>
+            Zahnwellness
+        </title>
+        
+        <h:form id="processstatusform">
+        
+            <ui:include src="/view/dialog/loadstatus.xhtml"/>
+            
+        </h:form>
+
+    </h:head> 
+      
+    <h:body onload="location.href='/view/index.xhtml';" style="background-color: #ffffff; margin: 0px;">
+        
+        <h:form id="startform">
+            
+            <p:remoteCommand name="startPage" action="#{startBean.loadPage()}"/>
+            
+        </h:form>
+        
+    </h:body>
+    
+</html>

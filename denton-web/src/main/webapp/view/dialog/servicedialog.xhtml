@@ -1,0 +1,103 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"    
+      xmlns:p="http://primefaces.org/ui" >
+    
+    <p:dialog id="servicedialog"
+              header="Ästhetische Zahnheilkunde:"
+              modal="true"
+              styleClass="ui-general-font"
+              width="600px"
+              height="400px"
+              visible="false"
+              binding="#{indexBean.serviceDialog}"
+              hideEffect="puff"
+              showEffect="puff"
+              resizable="false"
+              onHide="#{indexBean.closeServiceDialog()}">
+        
+        <p:accordionPanel activeIndex="-1"
+                          style="width: 560px; margin: 20px;">
+            
+            <p:tab title="KARIESPROPHYLAXE">
+                
+                <h:panelGrid columns="2" cellpadding="5">
+                
+                    <p:graphicImage value="/view/image/logo_72.png"/>
+                    
+                    <h:outputText
+                        value=""/>
+                    
+                </h:panelGrid>
+                
+            </p:tab>
+            
+            <p:tab title="MUNDHYGIENE">
+                
+                <h:panelGrid columns="2" cellpadding="5">
+                
+                    <p:graphicImage value="/view/image/logo_72.png"/>
+                    
+                    <h:outputText
+                        value=""/>
+                    
+                </h:panelGrid>
+                
+            </p:tab>
+            
+            <p:tab title="KERAMIKBRÜCKEN U. -INLAYS">
+                
+                <h:panelGrid columns="2" cellpadding="5">
+                
+                    <p:graphicImage value="/view/image/logo_72.png"/>
+                    
+                    <h:outputText
+                        value=""/>
+                    
+                </h:panelGrid>
+                
+            </p:tab>
+            
+            <p:tab title="AMALGAMSANIERUNG">
+                
+                <h:panelGrid columns="2" cellpadding="5">
+                
+                    <p:graphicImage value="/view/image/logo_72.png"/>
+                    
+                    <h:outputText
+                        value=""/>
+                    
+                </h:panelGrid>
+                
+            </p:tab>
+            
+            <p:tab title="PARODONTOLOGIE">
+                
+                <h:panelGrid columns="2" cellpadding="5">
+                
+                    <p:graphicImage value="/view/image/logo_72.png"/>
+                    
+                    <h:outputText
+                        value=""/>
+                    
+                </h:panelGrid>
+                
+            </p:tab>
+            
+            <p:tab title="ZAHNSCHMUCK">
+                
+                <h:panelGrid columns="2" cellpadding="5">
+                
+                    <p:graphicImage value="/view/image/logo_72.png"/>
+                    
+                    <h:outputText
+                        value=""/>
+                    
+                </h:panelGrid>
+                
+            </p:tab>
+            
+        </p:accordionPanel>
+        
+    </p:dialog>
+    
+</html>

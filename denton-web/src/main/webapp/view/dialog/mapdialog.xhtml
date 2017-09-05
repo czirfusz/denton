@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"      
+      xmlns:p="http://primefaces.org/ui" >
+    
+    <p:dialog id="mapdialog"
+              header="Ortung"
+              modal="true"
+              styleClass="ui-general-font"
+              width="825px"
+              height="400px"
+              visible="false"
+              binding="#{mapBean.mapDialog}"
+              hideEffect="drop"
+              showEffect="slide"
+              resizable="false"
+              onHide="#{mapBean.closeMapDialog()}">
+        
+        <p:gmap id="map" 
+                center="#{mapBean.lat}, #{mapBean.lng}"
+                type="ROADMAP" 
+                zoom="17"
+                streetView="true"
+                model="#{mapBean.mapModel}"
+                style="width: 800px; height: 400px;"/>
+        
+    </p:dialog>
+    
+</html>
