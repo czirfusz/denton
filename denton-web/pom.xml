@@ -49,6 +49,8 @@
             <groupId>org.primefaces.themes</groupId>
             <artifactId>drcaspary</artifactId>
             <version>1.0.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/drcaspary-1.0.1.jar</systemPath>
         </dependency>
         
         <!-- JSF 2 -->
